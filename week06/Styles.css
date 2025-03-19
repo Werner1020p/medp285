@@ -1,0 +1,107 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Times New Roman', Times, serif; /* Added Times New Roman as the second choice */
+  background-color: #f4f4f4;
+  color: #333;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  background-color: #4caf50;
+  color: white;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  font-weight: 600;
+}
+
+nav ul {
+  list-style: none;
+  padding: 0;
+}
+
+nav ul li {
+  display: inline;
+  margin-right: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: 400;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ffeb3b;
+}
+
+main {
+  padding: 40px;
+  text-align: center;
+  flex-grow: 1; /* Ensures the main section grows and fills available space */
+}
+
+main .gallery .image {
+  border: 5px solid #ddd; /* Add border to each image */
+  border-radius: 8px; /* Rounded corners */
+  overflow: hidden; /* Ensures the image doesn't overflow the border */
+  background-color: white; /* Adds a nice clean background around the image */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Adds subtle shadow for depth */
+}
+
+main .gallery img {
+  width: 100%;
+  max-width: 200px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+main .gallery img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+}
+
+main h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+main p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+main a {
+  text-decoration: none;
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+main a:hover {
+  background-color: #45a049;
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #333;
+  color: white;
+  margin-top: auto; /* Ensures the footer stays at the bottom */
+}
