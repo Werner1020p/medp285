@@ -1,0 +1,68 @@
+html {
+    box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+
+body {
+    background-color: rgb(137, 91, 13);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+div.container {
+    width: 80%;
+    margin: 0px auto;
+    padding: 40px;
+    background-color: white;
+}
+
+header, nav, main, aside, footer {
+    padding: 20px;
+    border: black dashed 2px;
+    margin: 0px 0px;    
+}
+
+header {
+    background-color: blueviolet;    
+}
+
+nav {
+    background-color: palegreen;   
+}
+
+nav a:hover {
+    color: rgb(29, 135, 22);
+    text-decoration: underline;
+}
+nav li {
+    display: inline-block;
+    background-color: aquamarine;
+    width: 100px;
+    height: 30px;
+    padding: 20px 0px;
+    text-align: center;
+}
+
+main {
+    background-color: greenyellow;
+    float: left;
+    width: 50%;
+}
+
+aside {
+    background-color: plum;
+    width: auto;
+    float: right;
+}
+
+footer {
+    background-color: pink;
+    clear: both;
+    width: auto;
+}
