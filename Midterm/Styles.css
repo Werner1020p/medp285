@@ -1,0 +1,470 @@
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #0f1b2b;
+  color: #f0f0f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 1s ease-out; /* Fade-in effect for entire page */
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(45deg, #5f4b8b, #9b4d96);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  animation: slideIn 1.5s ease-out;
+}
+
+header h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #f0f0f0;
+  animation: fadeInUp 1s ease-out; /* Header text slides up */
+}
+
+/* Navigation Styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s; /* Fade-in effect after 1s delay */
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+  margin: 15px;
+  font-size: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  padding: 10px 15px;
+}
+
+nav ul li a:hover {
+  color: #ff69b4;
+  animation: pulse 0.6s infinite alternate; /* Pulsing effect on hover */
+}
+
+/* Main Section Styling */
+main {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1.5s; /* Fade-in after the header */
+}
+
+main h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff69b4;
+  animation: fadeInUp 1s ease-out; /* Title slides up */
+}
+
+main p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+main a {
+  text-decoration: none;
+  background-color: #4b6cb7;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+main a:hover {
+  background-color: #1c3d5d;
+  animation: scaleUp 0.4s ease-out; /* Button scale-up effect */
+}
+
+/* Zodiac sign styling */
+main .aries, 
+main .gemini, 
+main .cancer, 
+main .leo, 
+main .virgo,
+main .libra,
+main .scorpio,
+main .sagittarius,
+main .capricorn,
+main .aquarius,
+main .pisces {
+  border: 3px solid #4a2c8c;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out; /* Fade-in and slide-up for images */
+}
+
+main .aries img, 
+main .gemini img, 
+main .cancer img, 
+main .leo img,
+main .virgo img,
+main .libra img,
+main .scorpio img,
+main .sagittarius img,
+main .capricorn img,
+main .aquarius img,
+main .pisces img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid #461389;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main .aries img:hover, 
+main .gemini img:hover, 
+main .cancer img:hover, 
+main .leo img:hover,
+main .virgo img:hover,
+main .libra img:hover,
+main .scorpio img:hover,
+main .sagittarius img:hover,
+main .capricorn img:hover,
+main .aquarius img:hover,
+main .pisces img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  border-color: #ff69b4;
+  animation: glowing 1.2s ease-out infinite alternate; /* Glow effect on hover */
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f1b2b;
+  color: white;
+  margin-top: auto;
+  opacity: 0;
+  animation: fadeIn 2s forwards 2s; /* Footer fades in after the main section */
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    color: #f0f0f0;
+  }
+  100% {
+    color: #ff69b4;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+  }
+  100% {
+    box-shadow: 0 0 25px #ff69b4, 0 0 30px #ff69b4, 0 0 35px #ff69b4;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
+/* Basic Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  background-color: #0f1b2b;
+  color: #f0f0f0;
+  line-height: 1.6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  animation: fadeIn 1s ease-out; /* Fade-in effect for entire page */
+}
+
+/* Header Styling */
+header {
+  background: linear-gradient(45deg, #5f4b8b, #9b4d96);
+  color: white;
+  padding: 20px;
+  text-align: center;
+  animation: slideIn 1.5s ease-out;
+}
+
+header h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 2.5rem;
+  color: #f0f0f0;
+  animation: fadeInUp 1s ease-out; /* Header text slides up */
+}
+
+/* Navigation Styling */
+nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  text-align: center;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1s; /* Fade-in effect after 1s delay */
+}
+
+nav ul li {
+  display: inline-block;
+  padding: 10px;
+  margin: 15px;
+  font-size: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #f0f0f0;
+  font-weight: 400;
+  transition: color 0.3s ease;
+  padding: 10px 15px;
+}
+
+nav ul li a:hover {
+  color: #ff69b4;
+  animation: pulse 0.6s infinite alternate; /* Pulsing effect on hover */
+}
+
+/* Main Section Styling */
+main {
+  padding: 20px;
+  text-align: center;
+  flex-grow: 1;
+  opacity: 0;
+  animation: fadeIn 2s forwards 1.5s; /* Fade-in after the header */
+}
+
+main h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  color: #ff69b4;
+  animation: fadeInUp 1s ease-out; /* Title slides up */
+}
+
+main p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+}
+
+main a {
+  text-decoration: none;
+  background-color: #4b6cb7;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+main a:hover {
+  background-color: #1c3d5d;
+  animation: scaleUp 0.4s ease-out; /* Button scale-up effect */
+}
+
+/* Zodiac sign styling */
+main .aries, 
+main .gemini, 
+main .cancer, 
+main .leo, 
+main .virgo,
+main .libra,
+main .scorpio,
+main .sagittarius,
+main .capricorn,
+main .aquarius,
+main .pisces {
+  border: 3px solid #4a2c8c;
+  border-radius: 12px;
+  overflow: hidden;
+  background-color: #1a1a1a;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  animation: fadeInUp 1s ease-out; /* Fade-in and slide-up for images */
+}
+
+main .aries img, 
+main .gemini img, 
+main .cancer img, 
+main .leo img,
+main .virgo img,
+main .libra img,
+main .scorpio img,
+main .sagittarius img,
+main .capricorn img,
+main .aquarius img,
+main .pisces img {
+  width: 100%;
+  max-width: 220px;
+  height: auto;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border: 3px solid #461389;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+main .aries img:hover, 
+main .gemini img:hover, 
+main .cancer img:hover, 
+main .leo img:hover,
+main .virgo img:hover,
+main .libra img:hover,
+main .scorpio img:hover,
+main .sagittarius img:hover,
+main .capricorn img:hover,
+main .aquarius img:hover,
+main .pisces img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+  border-color: #ff69b4;
+  animation: glowing 1.2s ease-out infinite alternate; /* Glow effect on hover */
+}
+
+/* Footer Styling */
+footer {
+  text-align: center;
+  padding: 20px;
+  background-color: #0f1b2b;
+  color: white;
+  margin-top: auto;
+  opacity: 0;
+  animation: fadeIn 2s forwards 2s; /* Footer fades in after the main section */
+}
+
+footer p {
+  font-size: 1rem;
+}
+
+/* Keyframe Animations */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    color: #f0f0f0;
+  }
+  100% {
+    color: #ff69b4;
+  }
+}
+
+@keyframes glowing {
+  0% {
+    box-shadow: 0 0 5px #ff69b4, 0 0 10px #ff69b4, 0 0 15px #ff69b4;
+  }
+  100% {
+    box-shadow: 0 0 25px #ff69b4, 0 0 30px #ff69b4, 0 0 35px #ff69b4;
+  }
+}
+
+@keyframes scaleUp {
+  0% {
+    transform: scale(1);
+  }
+  100% {
+    transform: scale(1.1);
+  }
+}
