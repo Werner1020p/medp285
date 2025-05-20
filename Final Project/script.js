@@ -27,5 +27,7 @@ function mousePressed() {
   let d = dist(mouseX, mouseY, x, y);
   if (d < 25) {
     currentColor = (currentColor + 1) % colors.length;
+    xspeed *= -1;
+    yspeed *= -1;
   }
 }
